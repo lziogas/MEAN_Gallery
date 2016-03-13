@@ -1,0 +1,12 @@
+<div class="modal-header">
+    <h3 class="modal-title">New Category</h3>
+</div>
+<form name="imageForm">
+	<div class="modal-body">
+		<input class="form-control top-space" type="text" ng-model="category.name" placeholder="New Category" required>
+	</div>
+	<div class="modal-footer">
+	    <button class="btn btn-primary" ng-click="addCategory(category.name)">Add</button>
+	    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+	</div>
+</form>

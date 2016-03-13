@@ -1,0 +1,14 @@
+<div class="modal-header">
+    <h3 class="modal-title">Upload Image</h3>
+</div>
+<form name="imageForm">
+	<div class="modal-body">
+		<input type="file" ngf-select ng-model="picFile" name="file" accept="image/*" required>
+		<input class="form-control top-space" type="text" ng-model="image.imageName" placeholder="Image Name" required>
+		<input class="form-control top-space" type="text" ng-model="image.tags" placeholder="Tags (seperators: , or space)">
+	</div>
+	<div class="modal-footer">
+	    <button class="btn btn-primary" ng-click="uploadPic(picFile, image)">Upload</button>
+	    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+	</div>
+</form>

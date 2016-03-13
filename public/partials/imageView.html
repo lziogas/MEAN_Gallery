@@ -1,0 +1,59 @@
+<div class="container" data-ng-init="init()">
+
+	<div class="row bot-space top-padding">
+
+		<div class="col-lg-10 col-md-10 col-xs-12 border">				
+			<img class="full-image center-block" src="{{image.img}}"/>
+			<div class="row  text-center top-space">
+				<span class="glyphicon glyphicon-menu-left arrow-glyph" ng-click="prev()" ng-if="showPrev"></span>
+				<span class="glyphicon glyphicon-menu-right arrow-glyph" ng-click="next()"></span>
+			</div>
+		</div>
+			
+		<div class="col-lg-2 col-md-10 col-xs-12 top-space">
+			<div>
+				<label>Title:</label>
+				<div>
+					<span editable ng-model="image.name" ng-change="updateImage(image.name)"></span>	
+				</div>
+			</div>
+
+			<div>
+				<label class="top-space">Tags:</label>
+				
+				<div align="right">
+					<div class="input-group">
+						<input class="form-control" ng-model="newtag" placeholder="New" />
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button" ng-click="createTag(newtag)">
+								<img src="../images/check.png"/>
+							</button>
+						</span>
+					</div>
+				</div>
+				<div style="max-height: 150px; overflow-y: auto; overflow-x: hidden; margin-top: 10px;">
+					<table class="scrollable-table">
+						<tbody>
+							<tr ng-repeat="tag in tags">
+								<td class="top-space-sm" editable ng-model="tag" ng-change="updateTag(tag, $index)">{{tag}}</td>
+								<td>
+									<img src="../images/cross-small-icon.png" ng-click="deleteTag(tag)"/>
+								</td>	
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div ng-show="alert" id="login-alert" class="alert alert-danger col-sm-12" >{{alert}}</div>
+			</div>
+
+			<div class="center-block top-space">
+				<button class="btn btn-info" ng-click="deletePic()">Delete</button>		
+			</div>
+			<button class="btn btn-main top-space
+			" ng-click="open('addCategory')" ng-controller="ModalCtrl">Add to category</button>
+
+		</div>
+
+	</div>
+
+</div>

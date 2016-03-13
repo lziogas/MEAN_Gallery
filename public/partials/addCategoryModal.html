@@ -1,0 +1,14 @@
+<div class="modal-header">
+    <h3 class="modal-title">Add to category</h3>
+</div>
+<form name="imageForm">
+	<ul>
+		<li ng-repeat="category in categories">
+			<input type="checkbox" ng-change="selectCategory(bool, category)" ng-model="bool">{{category.name}}
+		</li>
+	</ul>
+	<div class="modal-footer">
+	    <button class="btn btn-primary" ng-click="addImage()">Add</button>
+	    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+	</div>
+</form>

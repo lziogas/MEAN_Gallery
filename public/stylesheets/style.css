@@ -1,0 +1,121 @@
+html, body {
+	height: 100%;
+}
+
+.footer-container {
+	position: relative;
+}
+
+.container {
+	min-height: 85%;
+	position: relative;
+}
+
+#footer {
+	background-color: #f8f8f8;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid transparent;
+	border-color: #e7e7e7;
+    bottom: 0;
+    width: 100%;
+	position: relative;
+}
+
+.panel-info {
+	border-color: #e7e7e7;
+}
+
+.panel-info>.panel-heading	{
+	background-color: #f8f8f8;
+	border-color: #e7e7e7;
+}
+
+.row {
+	margin-right: 0;
+}
+
+.main-image {
+	position: relative;
+	padding-bottom: 5%;
+}
+
+.main-image img {
+	width: 100%;
+}
+
+.main-image h1 {
+	position: absolute;
+    top: 15%;
+    color: white;
+    width: 100%;
+    left: 0;
+}
+
+.thumb li {
+	list-style-type: none;
+}
+
+@media only screen and (max-width: 293px)  { 
+	.main-image h1 { 
+		font-size: 220%; 
+	} 
+}
+
+.top-space {
+	margin-top: 1em;
+}
+
+.top-space-sm {
+	margin-top: 3px;
+}
+
+.bot-space {
+	margin-bottom: 1em;
+}
+
+.full-image {
+	max-width: 80%;
+}
+
+.top-padding {
+	padding-top: 1%;
+}
+
+.border {
+	border-right: 2px solid #e7e7e7;
+}
+
+.scrollable-table {
+	width: 100%;
+	margin-left: 15px;
+}
+
+.btn-sm{
+	font-size: 5px;
+}
+
+.arrow-glyph {
+    font-size: 50px;
+}
+
+.arrow-glyph:hover {
+	color: #E3E3E3;
+}
+
+.nav-button {
+    color: #777;
+    position: relative;
+    display: block;
+    padding: 15px 15px;
+    text-decoration: none;
+}
+
+.nav-button:focus, .nav-button:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.categories {
+	color: #777;
+}
